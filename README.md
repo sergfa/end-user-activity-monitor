@@ -20,7 +20,7 @@ import { Agent } from "end-user-activity-monitor";
 const activityDetectorAgent = new Agent({ idleInterval: 5000 });
 //start activity monitoring
 activityDetectorAgent.startMonitor();
-//subscribe to activity changes: active/iddle
+//subscribe to activity changes: active/idle
 activityDetectorAgent.activityObservable().subscribe(status => console.log("activity status:", status));
 //stop activity monitoring after 30 secs
 setTimeout(() => activityDetectorAgent.stopMonitor(), 30000);
@@ -34,11 +34,11 @@ The consumer also can use the library by loading it via a script tag:
   ...
   <script src="dist/end-user-activity-monitor.js"></script>
   <script>
-    //create activity detector agent which fires activity idle event if user is not active for 5 seconds
+    //create activity detector agent which fires activity idle event if end user is not active for 5 seconds
     const activityDetectorAgent = new EUAMonitor.Agent({ idleInterval: 5000 });
     //start activity monitoring
     activityDetectorAgent.startMonitor();
-    //subscribe to activity changes: active/iddle
+    //subscribe to activity changes: active/idle
     activityDetectorAgent.activityObservable().subscribe(status => console.log("activity status:", status));
     //stop activity monitoring after 30 secs
     setTimeout(() => activityDetectorAgent.stopMonitor(), 30000);
@@ -72,13 +72,13 @@ agent.stopMonitor();
 agent.activityObservable().subscribe(status => console.log("activity status:", status));
 ```
 
-//check if user is active
+//check if end user is active
 
 ```javascript
 agent.isActive();
 ```
 
-//check if user is idle
+//check if end user is idle
 
 ```javascript
 agent.isIdle();
