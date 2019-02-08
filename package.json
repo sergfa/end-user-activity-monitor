@@ -1,0 +1,45 @@
+{
+  "name": "end-user-activity-monitor",
+  "version": "1.0.0",
+  "description": "A library that detects when user becomes active or idle",
+  "keywords": [
+    "active",
+    "enduser",
+    "idle",
+    "monitor",
+    "timeout"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergfa/end-user-activity-monitor.git"
+  },
+  "license": "MIT",
+  "author": "Sergey Fayman <sergfa@gmail.com>",
+  "main": "dist/end-user-activity-monitor.js",
+  "scripts": {
+    "build:dev": "npm run webpack-dev-server -- --env.mode development",
+    "build:prod": "npm run webpack -- --env.mode production",
+    "test": "npm run build:prod && karma start",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server"
+  },
+  "dependencies": {
+    "rxjs": "^6.3.3"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "jasmine-core": "^3.3.0",
+    "karma": "^4.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-webpack": "^3.0.5",
+    "rxjs-tslint": "^0.1.6",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
+    "webpack-merge": "^4.2.1"
+  }
+}
